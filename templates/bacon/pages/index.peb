@@ -1,0 +1,14 @@
+{% extends "core" %}
+
+{% block title %} Index page {% endblock %}
+
+{% block content %}
+    <h1> Index page </h1>
+    <p>Welcome to Jakon!</p>
+    <ul>
+        <li>{{ i18n("common","PAGE") }}</li>
+        <li>Static Page - {{ link(2) | raw }}</li>
+    </ul>
+    <a href="/admin/index">Admin</a><br>
+    <a href="/pagelet/get">Example Pagelet</a>
+{% endblock %}
