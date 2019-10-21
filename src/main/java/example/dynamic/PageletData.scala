@@ -1,9 +1,10 @@
 package example.dynamic
 
-import javax.validation.constraints.{Min, NotNull}
+import cz.kamenitxan.jakon.validation.validators.{Min, NotEmpty}
+
 
 class PageletData {
-	@NotNull(message = "NAME_NOT_NULL")
+	@NotEmpty
 	@Min(10)
 	var name: String = _
 }

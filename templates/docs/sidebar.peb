@@ -1,0 +1,35 @@
+<nav data-toggle="wy-nav-shift" class="wy-nav-side">
+	<div class="wy-side-scroll">
+		<div class="wy-side-nav-search">
+			<a href="#" class="icon icon-home">Jakon</a>
+			<div class="version">
+				latest
+			</div>
+			<!--div role="search">
+				<form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+					<input type="text" name="q" placeholder="Search docs"/>
+					<input type="hidden" name="check_keywords" value="yes"/>
+					<input type="hidden" name="area" value="default"/>
+				</form>
+			</div-->
+
+
+		</div>
+
+		<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+
+
+			<ul>
+				<li class="toctree-l1"><a class="reference internal" href="markup.html">Markup</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="options.html#quick-reference">Quick reference</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard support</a></li>
+				<li class="toctree-l1"><a class="reference internal" href="i18n.html">I18N</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</nav>

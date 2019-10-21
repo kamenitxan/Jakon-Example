@@ -1,8 +1,14 @@
 package example.pages
 
-import cz.kamenitxan.jakon.core.customPages.{AbstractStaticPage, StaticPage}
+import cz.kamenitxan.jakon.core.customPages.{AbstractCustomPage, AbstractStaticPage, CustomPage, StaticPage}
+import cz.kamenitxan.jakon.webui.ObjectSettings
 
-@StaticPage
-class IndexPage extends AbstractStaticPage(templateName = "pages/index", url = "index") {
+@CustomPage
+class IndexPage extends AbstractCustomPage {
+	override val objectSettings: ObjectSettings = null
 
+	override protected def generate(): Unit = {
+		val context = Map[String, AnyRef]()
+		engine.render("content", "index", context)
+	}
 }
