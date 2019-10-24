@@ -1,3 +1,5 @@
+{# @pebvariable name="page" type="cz.kamenitxan.jakon.core.model.Page" #}
+
 <nav data-toggle="wy-nav-shift" class="wy-nav-side">
 	<div class="wy-side-scroll">
 		<div class="wy-side-nav-search">
@@ -12,21 +14,13 @@
 					<input type="hidden" name="area" value="default"/>
 				</form>
 			</div-->
-
-
 		</div>
 
 		<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
 			<ul>
-				<li class="toctree-l1"><a class="reference internal" href="markup.html">Markup</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="options.html">Options</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="options.html#quick-reference">Quick reference</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="events.html">Events</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard support</a></li>
-				<li class="toctree-l1"><a class="reference internal" href="i18n.html">I18N</a></li>
+			{% for page in mainPages %}
+				<li class="toctree-l1"><a class="reference internal" href="{{ page.url }}.html">{{ page.title}}</a></li>
+			{% endfor %}
 			</ul>
 
 

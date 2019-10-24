@@ -8,8 +8,6 @@ import cz.kamenitxan.jakon.core.model.{Category, Page, Post}
 
 class JakonApp extends JakonInit{
 
-	Director.registerControler(new PageControler)
-
 	override def daoSetup(): Unit = {
 		super.daoSetup()
 		DBHelper.addDao(classOf[Category])

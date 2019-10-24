@@ -1,0 +1,14 @@
+<footer>
+
+	<div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <!-- TODO
+		<a href="markup.html" class="btn btn-neutral float-right" title="Markup" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a -->
+	</div>
+	<hr/>
+
+	<div role="contentinfo">
+		<p>&copy; Copyright 2019, Kamenitxan</p>
+	</div>
+	Built with <a href="https://github.com/kamenitxan/Jakon">Jakon</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+	provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>

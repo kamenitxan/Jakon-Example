@@ -8,28 +8,13 @@
 		<dl>
 			<dt>Versions</dt>
 			<dd><a href="/en/latest/">latest</a></dd>
-
-
 		</dl>
-		<dl>
+		<!--dl>
 			<dt>Downloads</dt>
-
 			<dd><a href="//readthedocs.org/projects/bootstrap-datepicker/downloads/pdf/latest/">pdf</a></dd>
-
 			<dd><a href="//readthedocs.org/projects/bootstrap-datepicker/downloads/htmlzip/latest/">htmlzip</a></dd>
-
 			<dd><a href="//readthedocs.org/projects/bootstrap-datepicker/downloads/epub/latest/">epub</a></dd>
-
-		</dl>
-		<dl>
-			<dt>On Read the Docs</dt>
-			<dd>
-				<a href="//readthedocs.org/projects/bootstrap-datepicker/?fromdocs=bootstrap-datepicker">Project Home</a>
-			</dd>
-			<dd>
-				<a href="//readthedocs.org/builds/bootstrap-datepicker/?fromdocs=bootstrap-datepicker">Builds</a>
-			</dd>
-		</dl>
+		</dl-->
 		<hr/>
 		Template provided by <a href="http://www.readthedocs.org">Read the Docs</a>.
 
