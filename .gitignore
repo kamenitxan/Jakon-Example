@@ -24,7 +24,6 @@
 hs_err_pid*
 ### Scala template
 .idea/
-/jakonTest.sqlite
 .node_modules/
 jakon_config.properties
 /node_modules/

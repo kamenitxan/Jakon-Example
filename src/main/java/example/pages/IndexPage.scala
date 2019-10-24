@@ -14,8 +14,10 @@ class IndexPage extends AbstractCustomPage {
 
 	override protected def generate(): Unit = {
 		DBHelper.withDbConnection(implicit conn => {
+			val mainPages = PageService.getMainPages()
 			val context = Map[String, AnyRef](
-				"mainPages" -> PageService.getMainPages().asJava
+				"mainPages" -> mainPages.asJava,
+				"page" -> mainPages.find(p => p.title == "Jakon").orNull
 			)
 			engine.render("content", "index", context)
 		})
