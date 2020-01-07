@@ -5179,7 +5179,6 @@ html {
 .wy-nav-content {
 	padding: 1.618em 3.236em;
 	height: 100%;
-	max-width: 800px;
 	margin: auto
 }
 
@@ -5790,7 +5789,9 @@ footer span.commit code, footer span.commit .rst-content tt, .rst-content footer
 .rst-content tt, .rst-content tt, .rst-content code {
 	color: #000;
 	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", Courier, monospace;
-	padding: 2px 5px
+	padding: 2px 5px;
+	display: inline-block;
+
 }
 
 .rst-content tt big, .rst-content tt em, .rst-content tt big, .rst-content code big, .rst-content tt em, .rst-content code em {

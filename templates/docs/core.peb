@@ -27,10 +27,10 @@
 	<link rel="stylesheet" href="https://assets.readthedocs.org/static/css/readthedocs-doc-embed.css" type="text/css"/>
 
 	<!-- Add page-specific data, which must exist in the page js, not global -->
-	<script type="text/javascript">
+	<!--script type="text/javascript">
 		READTHEDOCS_DATA['page'] = 'index'
 		READTHEDOCS_DATA['source_suffix'] = '.rst'
-	</script>
+	</script-->
 
 	<!-- end RTD <extrahead> -->
 </head>
