@@ -43,7 +43,7 @@ exports.modules = {
         // Strip app/ and app/externals/ prefixes
             .replace(/^app\/(?:externals\/)?/, '')
             // Allow -x.y[.z…] version suffixes in mantisses
-            .replace("src/frontend/docs/js/", '')
+            .replace("modules/backend/src/frontend/docs/js/", '')
     }
 };
 

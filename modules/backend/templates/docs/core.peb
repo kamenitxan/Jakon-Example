@@ -57,7 +57,7 @@
 	};
 </script>
 
-
+<script type="text/javascript" src="https://assets.readthedocs.org/static/javascript/readthedocs-doc-embed.js"></script>
 <script type="text/javascript">
 	jQuery(function () {
 		SphinxRtdTheme.Navigation.enable(true);

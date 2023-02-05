@@ -3,7 +3,7 @@
 <nav data-toggle="wy-nav-shift" class="wy-nav-side">
 	<div class="wy-side-scroll">
 		<div class="wy-side-nav-search">
-			<a href="#" class="icon icon-home">Jakon</a>
+			<a href="#" class="icon icon-home"> Jakon</a>
 			<div class="version">
 				latest
 			</div>
@@ -21,6 +21,14 @@
 			{% for page in mainPages %}
 				<li class="toctree-l1"><a class="reference internal" href="{{ page.url }}.html">{{ page.title}}</a></li>
 			{% endfor %}
+			</ul>
+
+			<ul class="current" aria-expanded="true">
+				<li class="toctree-l1 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Installation</a>
+					<ul>
+						<li class="toctree-l2"><a class="reference internal" href="#via-git-or-download">Via Git or Download</a></li>
+					</ul>
+				</li>
 			</ul>
 
 
