@@ -29,3 +29,11 @@ jakon_config.properties
 /node_modules/
 /target/
 /out
+/project/target/
+/project/project/target/
+/modules/backend/out/
+/modules/backend/target/
+/modules/frontend/target/
+/modules/backend/upload/
+/modules/backend/localDeploy/
+/modules/backend/static/jakon/

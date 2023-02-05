@@ -2,7 +2,6 @@ package example
 
 import cz.kamenitxan.jakon.JakonInit
 import cz.kamenitxan.jakon.core.Director
-import cz.kamenitxan.jakon.core.controler.PageControler
 import cz.kamenitxan.jakon.core.database.DBHelper
 import cz.kamenitxan.jakon.core.model.{Category, Page, Post}
 

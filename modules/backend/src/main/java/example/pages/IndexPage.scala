@@ -1,16 +1,15 @@
 package example.pages
 
-import cz.kamenitxan.jakon.core.customPages.{AbstractCustomPage, AbstractStaticPage, CustomPage, StaticPage}
+import cz.kamenitxan.jakon.core.custom_pages.{AbstractCustomPage, CustomPage}
 import cz.kamenitxan.jakon.core.database.DBHelper
 import cz.kamenitxan.jakon.webui.ObjectSettings
 import example.service.PageService
 
-import scala.collection.JavaConverters._
+import scala.collection.JavaConverters.*
 
 
 @CustomPage
 class IndexPage extends AbstractCustomPage {
-	override val objectSettings: ObjectSettings = null
 
 	override protected def generate(): Unit = {
 		DBHelper.withDbConnection(implicit conn => {

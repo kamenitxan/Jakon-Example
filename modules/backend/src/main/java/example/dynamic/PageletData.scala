@@ -5,6 +5,6 @@ import cz.kamenitxan.jakon.validation.validators.{Min, NotEmpty}
 
 class PageletData {
 	@NotEmpty
-	@Min(10)
+	@Min(value = 10)
 	var name: String = _
 }

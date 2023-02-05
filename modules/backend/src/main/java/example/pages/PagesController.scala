@@ -1,13 +1,12 @@
 package example.pages
 
-import cz.kamenitxan.jakon.core.customPages.AbstractCustomPage
-import cz.kamenitxan.jakon.core.customPages.CustomPage
+import cz.kamenitxan.jakon.core.custom_pages.{AbstractCustomPage, CustomPage}
 import cz.kamenitxan.jakon.core.database.DBHelper
 import cz.kamenitxan.jakon.core.model.Page
 import cz.kamenitxan.jakon.webui.ObjectSettings
 import example.service.PageService
 
-import scala.collection.JavaConverters._
+import scala.collection.JavaConverters.*
 
 @CustomPage
 class PagesController extends AbstractCustomPage {
@@ -27,5 +26,4 @@ class PagesController extends AbstractCustomPage {
 		})
 	}
 
-	override val objectSettings: ObjectSettings = null
 }
