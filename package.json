@@ -14,7 +14,7 @@
     "domador": "^2.4.4",
     "jquery": "^3.5.0",
     "megamark": "^3.3.0",
-    "npm": "^6.5.0",
+    "npm": "^9.6.4",
     "woofmark": "^4.2.3"
   },
   "devDependencies": {
