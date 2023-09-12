@@ -16,6 +16,7 @@ class IndexPage extends AbstractCustomPage {
 			val mainPages = PageService.getMainPages()
 			val context = Map[String, AnyRef](
 				"mainPages" -> mainPages.asJava,
+				"currentUrl" -> "index.html",
 				"page" -> mainPages.find(p => p.title == "Jakon").orNull
 			)
 			engine.render("content", "index", context)

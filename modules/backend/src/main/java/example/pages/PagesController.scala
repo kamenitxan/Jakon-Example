@@ -19,6 +19,7 @@ class PagesController extends AbstractCustomPage {
 			mainPages.forEach(page => {
 				val context = Map[String, AnyRef](
 					"mainPages" -> mainPages,
+					"currentUrl" -> page.createUrl,
 					"page" -> page
 				)
 				engine.render("content", s"${page.url}", context)

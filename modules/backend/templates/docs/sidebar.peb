@@ -1,4 +1,5 @@
 {# @pebvariable name="page" type="cz.kamenitxan.jakon.core.model.Page" #}
+{# @pebvariable name="currentUrl" type="java.lang.String" #}
 
 <nav data-toggle="wy-nav-shift" class="wy-nav-side">
 	<div class="wy-side-scroll">
@@ -17,19 +18,22 @@
 		</div>
 
 		<div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-			<ul>
+			<ul class="current" aria-expanded="true">
 			{% for page in mainPages %}
-				<li class="toctree-l1"><a class="reference internal" href="{{ page.url }}.html">{{ page.title}}</a></li>
+				<li class="toctree-l1{% if currentUrl == page.url %} current{% endif %}"><a class="reference internal" href="{{ page.url }}.html">{{ page.title}}</a></li>
 			{% endfor %}
 			</ul>
 
-			<ul class="current" aria-expanded="true">
-				<li class="toctree-l1 current" aria-expanded="true"><a class="reference internal current" href="#" aria-expanded="true">Installation</a>
+			<!--ul >
+				<li class="toctree-l1" ><a class="reference internal current" href="#" >Installation</a>
 					<ul>
 						<li class="toctree-l2"><a class="reference internal" href="#via-git-or-download">Via Git or Download</a></li>
+						<ul>
+							<li class="toctree-l3"><a class="reference internal" href="#via-git-or-download">l3</a></li>
+						</ul>
 					</ul>
 				</li>
-			</ul>
+			</ul-->
 
 
 		</div>
