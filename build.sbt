@@ -1,8 +1,8 @@
 import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
-	val Scala = "3.2.2"
-	val jakon = "0.5.1-SNAPSHOT"
+	val Scala = "3.3.1-RC4"
+	val jakon = "0.5.7"
 }
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
@@ -14,7 +14,7 @@ version := projectVersion
 
 
 ThisBuild / resolvers += Resolver.mavenLocal
-ThisBuild / resolvers += "Artifactory" at "https://kamenitxans-maven-repository.appspot.com/"
+ThisBuild / resolvers += "Artifactory" at "https://nexus.kamenitxan.eu/repository/jakon/"
 
 
 val Dependencies = new {
@@ -30,8 +30,8 @@ val Dependencies = new {
 					ExclusionRule(organization = "com.sun.mail", name = "smtp"),
 					ExclusionRule(organization = "javax.mail", name = "javax.mail-api")
 				),
-				"org.scalatest" %% "scalatest" % "3.2.14" % "test",
-				"org.seleniumhq.selenium" % "htmlunit-driver" % "3.63.0" % "test"
+				"org.scalatest" %% "scalatest" % "3.2.17" % "test",
+				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.12.0" % "test"
 			)
 	)
 
