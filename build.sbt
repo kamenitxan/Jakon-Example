@@ -62,7 +62,7 @@ lazy val backend = (project in file("modules/backend"))
 	.enablePlugins(DockerPlugin)
 	.settings(
 		name := projectName,
-		Compile / mainClass := Some("cz.kamenitxan.elcegoo.Main"),
+		Compile / mainClass := Some("example.Main"),
 		Test / fork := true,
 		Universal / mappings += {
 			val appJs = (frontend / Compile / fullOptJS).value.data
