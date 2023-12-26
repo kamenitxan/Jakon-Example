@@ -2,7 +2,7 @@ import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
 	val Scala = "3.3.1"
-	val jakon = "0.5.8"
+	val jakon = "0.5.9-SNAPSHOT"
 }
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
@@ -75,7 +75,7 @@ lazy val backend = (project in file("modules/backend"))
 		Docker / packageName := "tauroadmin-example"
 	)
 
-lazy val commonBuildSettings: Seq[Def.Setting[_]] = Seq(
+lazy val commonBuildSettings: Seq[Def.Setting[?]] = Seq(
 	scalaVersion := V.Scala,
 	organization := "cz.kamenitxan",
 	name := projectName,

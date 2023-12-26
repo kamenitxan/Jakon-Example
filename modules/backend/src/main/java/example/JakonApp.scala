@@ -15,7 +15,4 @@ class JakonApp extends JakonInit{
 		DBHelper.addDao(classOf[DocsPage])
 	}
 
-	override def adminControllers(): Unit = {
-		super.adminControllers()
-	}
 }
