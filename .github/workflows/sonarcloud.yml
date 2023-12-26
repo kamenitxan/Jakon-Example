@@ -29,4 +29,4 @@ jobs:
             -Dsonar.projectKey=kamenitxan_Jakon-Example_AYcKHKzimGdCMvl9IxKE
             -Dsonar.sources=modules/backend/src
             -Dsonar.verbose=false
-            -Dsonar.exclusions=modules/backend/src/main/resources/**
+            -Dsonar.exclusions=modules/backend/src/main/resources/**,modules/backend/src/frontend/**
