@@ -47,7 +47,7 @@ lazy val frontend = (project in file("modules/frontend"))
 	.settings(
 		Dependencies.frontend,
 		Dependencies.tests,
-		Test / jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
+		//Test / jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
 	)
 	.settings(
 		commonBuildSettings,
