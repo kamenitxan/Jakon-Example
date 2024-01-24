@@ -2,7 +2,7 @@ import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
 	val Scala = "3.3.1"
-	val jakon = "0.5.9-SNAPSHOT"
+	val jakon = "0.5.9"
 }
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
