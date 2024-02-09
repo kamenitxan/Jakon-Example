@@ -11,7 +11,7 @@ import scala.collection.mutable
 class AuthorizedPagelet extends AbstractPagelet {
 
 	@Get(path = "/get", template = "pagelet/examplePagelet")
-	def get(req: Request, res: Response, conn: Connection) = {
+	def get(req: Request, res: Response, conn: Connection): mutable.Map[String, Any] = {
 		val context = mutable.Map[String, Any](
 			"pushed" -> "authorized"
 		)

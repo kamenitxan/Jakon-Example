@@ -13,7 +13,7 @@ class ExamplePagelet extends AbstractPagelet {
 	private val logger = LoggerFactory.getLogger(this.getClass)
 
 	@Get(path = "/get", template = "pagelet/examplePagelet")
-	def get(req: Request, res: Response, conn: Connection) = {
+	def get(req: Request, res: Response, conn: Connection): mutable.Map[String, Any] = {
 		val context = mutable.Map[String, Any](
 			"pushed" -> "someValue"
 		)
@@ -21,7 +21,7 @@ class ExamplePagelet extends AbstractPagelet {
 	}
 
 	@Post(path = "/post", template = "pagelet/examplePagelet")
-	def post(req: Request, res: Response, conn: Connection, data: PageletData) = {
+	def post(req: Request, res: Response, conn: Connection, data: PageletData): mutable.Map[String, Any] = {
 		val context = mutable.Map[String, Any](
 			"pushed" -> "post done"
 		)

@@ -1,9 +1,8 @@
 package example
 
 import cz.kamenitxan.jakon.JakonInit
-import cz.kamenitxan.jakon.core.Director
 import cz.kamenitxan.jakon.core.database.DBHelper
-import cz.kamenitxan.jakon.core.model.{Category, Page, Post}
+import cz.kamenitxan.jakon.core.model.{Category, Post}
 import example.entity.DocsPage
 
 class JakonApp extends JakonInit{
