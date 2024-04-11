@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "jquery": "3.6.2",
-    "npm": "^8.19.2"
+    "npm": "^10.5.2"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2",
