@@ -38,3 +38,4 @@ jakon_config.properties
 /modules/backend/localDeploy/
 /modules/backend/static/jakon/
 /.bsp/sbt.json
+/modules/backend/static/docs/mix-manifest.json
