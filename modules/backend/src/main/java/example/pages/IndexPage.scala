@@ -4,6 +4,7 @@ import cz.kamenitxan.jakon.core.custom_pages.{AbstractCustomPage, CustomPage}
 import cz.kamenitxan.jakon.core.database.DBHelper
 import example.service.PageService
 
+import java.time.LocalDate
 import scala.jdk.CollectionConverters.*
 
 
@@ -16,7 +17,8 @@ class IndexPage extends AbstractCustomPage {
 			val context = Map[String, AnyRef](
 				"mainPages" -> mainPages.asJava,
 				"currentUrl" -> "index.html",
-				"page" -> mainPages.find(p => p.title == "Jakon").orNull
+				"page" -> mainPages.find(p => p.title == "Jakon").orNull,
+				"year" -> Integer.valueOf(LocalDate.now.getYear)
 			)
 			engine.render("content", "index", context)
 		})
