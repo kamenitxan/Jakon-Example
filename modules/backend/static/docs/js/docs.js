@@ -288,6 +288,7 @@ $(document).ready(function () {
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.$ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 window.$ = __webpack_provided_window_dot_jQuery = jQuery = $;
+window.prism = __webpack_require__(/*! prismjs */ "./node_modules/prismjs/prism.js");
 
 /***/ }),
 
