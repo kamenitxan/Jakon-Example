@@ -39,3 +39,4 @@ jakon_config.properties
 /modules/backend/static/jakon/
 /.bsp/sbt.json
 /modules/backend/static/docs/mix-manifest.json
+/modules/backend/static/docs/js/manifest.js

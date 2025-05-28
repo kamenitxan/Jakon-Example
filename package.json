@@ -9,8 +9,6 @@
     "mix": "npx mix"
   },
   "dependencies": {
-    "jquery": "3.7.1",
-    "modernizr": "3.13.1",
     "prismjs": "^1.30.0"
   },
   "devDependencies": {
