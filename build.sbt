@@ -1,8 +1,8 @@
 import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
-	val Scala = "3.3.4"
-	val jakon = "0.6.0"
+	val Scala = "3.3.6"
+	val jakon = "0.7.1"
 }
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
@@ -26,12 +26,9 @@ val Dependencies = new {
 	lazy val backend = Seq(
 		libraryDependencies ++=
 			Seq(
-				"cz.kamenitxan" %% "jakon" % V.jakon changing() excludeAll (
-					ExclusionRule(organization = "com.sun.mail", name = "smtp"),
-					ExclusionRule(organization = "javax.mail", name = "javax.mail-api")
-				),
+				"cz.kamenitxan" %% "jakon" % V.jakon changing(),
 				"org.scalatest" %% "scalatest" % "3.2.19" % "test",
-				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.28.0" % "test"
+				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.38.0" % "test"
 			)
 	)
 
