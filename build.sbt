@@ -2,7 +2,7 @@ import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
 	val Scala = "3.3.6"
-	val jakon = "0.7.1"
+	val jakon = "0.7.2-SNAPSHOT"
 }
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
@@ -28,7 +28,7 @@ val Dependencies = new {
 			Seq(
 				"cz.kamenitxan" %% "jakon" % V.jakon changing(),
 				"org.scalatest" %% "scalatest" % "3.2.19" % "test",
-				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.38.0" % "test"
+				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.40.0" % "test"
 			)
 	)
 
