@@ -1,0 +1,117 @@
+/* Tabulky - zlepšená čitelnost s čárami pro oddělení buněk */
+
+/* Všechny tabulky - přidání čar */
+table {
+    border-collapse: collapse;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+/* Čáry oddělující všechny buňky - HTML tabulky */
+table td,
+table th {
+    border: 1px solid #d0d0d0;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Hlava tabulky - tmavší pozadí */
+table thead th {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Světlejší šedé pozadí pro sudé řádky */
+table tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+/* Hover efekt pro řádky */
+table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Zarovnání textu v tabulkách */
+table td p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Kompatibilita s .rst-content tabulkami */
+.rst-content table.docutils,
+.wy-table {
+    border: 1px solid #d0d0d0;
+}
+
+.rst-content table.docutils td,
+.rst-content table.docutils th,
+.wy-table td,
+.wy-table th {
+    border: 1px solid #d0d0d0;
+    padding: 10px 12px;
+}
+
+.rst-content table.docutils thead th,
+.wy-table thead th {
+    background-color: #f0f0f0;
+    border: 1px solid #b0b0b0;
+    font-weight: bold;
+}
+
+.rst-content table.docutils tbody tr:nth-child(2n),
+.wy-table tbody tr:nth-child(2n) {
+    background-color: #f9f9f9;
+}
+
+.rst-content table.docutils tbody tr:hover,
+.wy-table tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+.rst-content table.docutils td p,
+.wy-table td p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Formátování pre a code bloků - DŮLEŽITÉ: white-space: pre MUSÍ zachovávat řádky */
+pre,
+pre[class*="language-"] {
+    white-space: pre !important;
+    word-wrap: normal;
+    overflow-x: auto;
+    padding: 12px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+code,
+code[class*="language-"] {
+    white-space: pre !important;
+    word-break: normal;
+}
+
+pre code,
+pre[class*="language-"] code,
+pre code[class*="language-"] {
+    white-space: pre !important;
+    word-break: normal;
+    display: block;
+}
+
+/* Zajistí správné zobrazení řádků - všechny varianty */
+pre code.language-properties,
+pre[class*="language-"] code.language-properties,
+pre code[class*="language-properties"],
+pre[class*="language-properties"] code {
+    white-space: pre !important;
+    word-wrap: normal;
+}
+
