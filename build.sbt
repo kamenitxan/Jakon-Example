@@ -1,36 +1,15 @@
-import sbtassembly.AssemblyPlugin.autoImport.assembly
-
-val V = new {
-	val Scala = "3.3.6"
-	val jakon = "0.8.0-SNAPSHOT"
-}
 val projectName = "jakonExample"
 val projectVersion = "1.0.0"
 
 scalaVersion := V.Scala
 organization := "cz.kamenitxan"
-name := projectName
+name := s"$projectName-root"
 version := projectVersion
 
 
 ThisBuild / resolvers += Resolver.mavenLocal
 ThisBuild / resolvers += "Artifactory" at "https://nexus.kamenitxan.eu/repository/jakon/"
 
-
-val Dependencies = new {
-
-	lazy val backend = Seq(
-		libraryDependencies ++=
-			Seq(
-				"cz.kamenitxan" %% "jakon" % V.jakon changing(),
-				"org.scalatest" %% "scalatest" % "3.2.20" % "test",
-				"org.seleniumhq.selenium" % "htmlunit3-driver" % "4.51.0" % "test"
-			)
-	)
-
-	lazy val tests = Def.settings(
-	)
-}
 
 lazy val root = (project in file(".")).aggregate(backend)
 
@@ -89,9 +68,6 @@ val CICommands = Seq(
 	"clean",
 	"backend/compile",
 	"backend/test",
-	"frontend/compile",
-	"frontend/fastOptJS",
-	"frontend/test",
 	s"scalafix --check $scalafixRules"
 ).mkString(";")
 
