@@ -19,10 +19,6 @@ ThisBuild / resolvers += "Artifactory" at "https://nexus.kamenitxan.eu/repositor
 
 val Dependencies = new {
 
-	lazy val frontend = Seq(
-
-	)
-
 	lazy val backend = Seq(
 		libraryDependencies ++=
 			Seq(
@@ -36,20 +32,8 @@ val Dependencies = new {
 	)
 }
 
-lazy val root = (project in file(".")).aggregate(frontend, backend)
+lazy val root = (project in file(".")).aggregate(backend)
 
-lazy val frontend = (project in file("modules/frontend"))
-	.enablePlugins(ScalaJSPlugin)
-	.settings(scalaJSUseMainModuleInitializer := false)
-	.settings(
-		Dependencies.frontend,
-		Dependencies.tests,
-		//Test / jsEnv := new org.scalajs.jsenv.jsdomnodejs.JSDOMNodeJSEnv()
-	)
-	.settings(
-		commonBuildSettings,
-		name := projectName + "-fe"
-	)
 
 lazy val backend = (project in file("modules/backend"))
 	.settings(Dependencies.backend)
@@ -61,10 +45,6 @@ lazy val backend = (project in file("modules/backend"))
 		name := projectName,
 		Compile / mainClass := Some("example.Main"),
 		Test / fork := true,
-		Universal / mappings += {
-			val appJs = (frontend / Compile / fullOptJS).value.data
-			appJs -> "lib/prod.js"
-		},
 		Universal / javaOptions ++= Seq(
 			"--port 8080",
 			"--mode prod"
@@ -97,28 +77,6 @@ Test / fork := true
 Test / testForkedParallel := false
 Test / parallelExecution:= false
 Test / logBuffered := false
-
-lazy val fastOptCompileCopy = taskKey[Unit]("")
-val jsPath = "modules/backend/src/main/resources"
-fastOptCompileCopy := {
-	val source = (frontend / Compile / fastOptJS).value.data
-	IO.copyFile(
-		source,
-		baseDirectory.value / jsPath / "dev.js"
-	)
-}
-
-lazy val fullOptCompileCopy = taskKey[Unit]("")
-fullOptCompileCopy := {
-	val source = (frontend / Compile / fullOptJS).value.data
-	IO.copyFile(
-		source,
-		baseDirectory.value / jsPath / "prod.js"
-	)
-}
-
-addCommandAlias("runDev", ";fastOptCompileCopy; backend/reStart --mode dev")
-addCommandAlias("runProd", ";fullOptCompileCopy; backend/reStart --mode prod")
 
 val scalafixRules = Seq(
 	"OrganizeImports",
