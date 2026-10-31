@@ -1,0 +1,16 @@
+{#- Pebble removes the first newline after "}}" and "%}", so a line ending with a tag needs one extra empty line. -#}
+{% autoescape false %}# {{ title }}
+
+
+> {{ summary }}
+
+
+The documentation is written in markdown. Every page is available as plain markdown text (`.txt`). [llms-full.txt](/llms-full.txt) contains all pages in one file.
+
+## Documentation
+
+{% for page in mainPages %}- [{{ page.title }}]({{ page.url }}.txt){% if page.description is not empty %}: {{ page.description }}{% endif %}
+
+{% for child in page.children %}  - [{{ child.title }}]({{ child.url }}.txt){% if child.description is not empty %}: {{ child.description }}{% endif %}
+
+{% endfor %}{% endfor %}{% endautoescape %}

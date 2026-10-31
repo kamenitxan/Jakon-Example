@@ -1,0 +1,10 @@
+{% autoescape false %}{% for page in allPages %}# {{ page.title }}
+
+
+{{ page.text }}
+
+
+{% if not loop.last %}
+---
+
+{% endif %}{% endfor %}{% endautoescape %}
