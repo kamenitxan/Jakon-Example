@@ -22,6 +22,9 @@ class DocsPage  extends JakonObject with Ordered {
 	@Transient
 	@JakonField(listOrder = -96)
 	var visibleOrder: Int = _
+	/** child pages, filled by PageService for the menu and rendering */
+	@Transient
+	var children: java.util.List[DocsPage] = new java.util.ArrayList[DocsPage]()
 
 	override def createUrl: String = "/page/" + title.replaceAll(" ", "_").toLowerCase
 

@@ -22,8 +22,10 @@
 			</div>
 			<div role="main" class="document">
 				<div class="language-scala">
-					<h1>{{ page.title }}</h1>
-					{{ page.content | md | raw }}
+					<section>
+						<h1>{{ page.title }}</h1>
+						{{ page.content | md | raw }}
+					</section>
 				</div>
 
 			</div>

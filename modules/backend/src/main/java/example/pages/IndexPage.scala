@@ -17,6 +17,7 @@ class IndexPage extends AbstractCustomPage {
 			val context = Map[String, AnyRef](
 				"mainPages" -> mainPages.asJava,
 				"currentUrl" -> "index.html",
+				"currentParentUrl" -> "",
 				"page" -> mainPages.find(p => p.title == "Jakon").orNull,
 				"year" -> Integer.valueOf(LocalDate.now.getYear)
 			)

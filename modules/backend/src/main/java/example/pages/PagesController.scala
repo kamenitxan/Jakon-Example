@@ -14,10 +14,12 @@ class PagesController extends AbstractCustomPage {
 	override def generate(): Unit = {
 		DBHelper.withDbConnection(implicit conn => {
 			val mainPages = PageService.getMainPages().asJava
-			mainPages.forEach(page => {
+			val allPages = mainPages.asScala.flatMap(p => (p, "") +: p.children.asScala.toSeq.map(c => (c, p.url)))
+			allPages.foreach((page, parentUrl) => {
 				val context = Map[String, AnyRef](
 					"mainPages" -> mainPages,
 					"currentUrl" -> page.createUrl,
+					"currentParentUrl" -> parentUrl,
 					"page" -> page,
 					"year" -> year
 				)
