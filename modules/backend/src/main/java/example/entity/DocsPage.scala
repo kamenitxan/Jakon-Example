@@ -6,6 +6,7 @@ import cz.kamenitxan.jakon.core.model.{JakonObject, Ordered, Page}
 import cz.kamenitxan.jakon.webui.ObjectSettings
 
 import java.sql.{Connection, Statement, Types}
+import scala.compiletime.uninitialized
 
 class DocsPage  extends JakonObject with Ordered {
 	@JakonField(searched = true)
@@ -14,14 +15,14 @@ class DocsPage  extends JakonObject with Ordered {
 	var content: String = ""
 	@ManyToOne
 	@JakonField(inputTemplate = "String")
-	var parent: DocsPage = _
+	var parent: DocsPage = uninitialized
 	@JakonField
 	var showComments: Boolean = false
 	@JakonField(listOrder = -96, shownInEdit = false, shownInList = false)
-	var objectOrder: Double = _
+	var objectOrder: Double = uninitialized
 	@Transient
 	@JakonField(listOrder = -96)
-	var visibleOrder: Int = _
+	var visibleOrder: Int = uninitialized
 	/** child pages, filled by PageService for the menu and rendering */
 	@Transient
 	var children: java.util.List[DocsPage] = new java.util.ArrayList[DocsPage]()

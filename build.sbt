@@ -1,7 +1,7 @@
 import sbtassembly.AssemblyPlugin.autoImport.assembly
 
 val V = new {
-	val Scala = "3.3.6"
+	val Scala = "3.9.0"
 	val jakon = "0.8.0-SNAPSHOT"
 }
 val projectName = "jakonExample"
@@ -39,17 +39,10 @@ lazy val backend = (project in file("modules/backend"))
 	.settings(Dependencies.backend)
 	.settings(Dependencies.tests)
 	.settings(commonBuildSettings)
-	.enablePlugins(JavaAppPackaging)
-	.enablePlugins(DockerPlugin)
 	.settings(
 		name := projectName,
 		Compile / mainClass := Some("example.Main"),
-		Test / fork := true,
-		Universal / javaOptions ++= Seq(
-			"--port 8080",
-			"--mode prod"
-		),
-		Docker / packageName := "tauroadmin-example"
+		Test / fork := true
 	)
 
 lazy val commonBuildSettings: Seq[Def.Setting[?]] = Seq(
@@ -89,9 +82,6 @@ val CICommands = Seq(
 	"clean",
 	"backend/compile",
 	"backend/test",
-	"frontend/compile",
-	"frontend/fastOptJS",
-	"frontend/test",
 	s"scalafix --check $scalafixRules"
 ).mkString(";")
 
